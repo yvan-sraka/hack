@@ -113,6 +113,7 @@
 .hack ol li:nth-child(n+10):after {
   left: -7px;
 }
+/*
 .hack blockquote {
   position: relative;
   padding-left: 17px;
@@ -127,6 +128,7 @@
   left: 0;
   line-height: 20px;
 }
+*/
 .hack em:before,
 .hack em:after {
   content: "*";
@@ -144,7 +146,7 @@
   content: "`";
   display: inline;
 }
-
+/*
 .hack hr {
   position: relative;
   height: 20px;
@@ -161,6 +163,7 @@
   width: 100%;
   word-wrap: break-word;
 }
+*/
 @-moz-document url-prefix() {
   .hack h1 {
     display: block;
