@@ -40,6 +40,15 @@ code[class*="language-"], pre[class*="language-"] {
   margin: 1.75rem 0;
 }
 
+p {
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong {
+  color: black;
+}
+
 a {
   cursor: pointer;
   color: blue;
