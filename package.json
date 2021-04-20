@@ -4,11 +4,8 @@
   "description": "Dead simple CSS framework.",
   "main": "dist/hack.css",
   "scripts": {
-    "test": "npm run build",
-    "build": "gulp build",
-    "dev": "gulp",
-    "gh": "npm run build && gh-pages -d demo",
-    "toc": "markdown-toc -i README.md"
+    "build": "parcel build src/css/hack.css",
+    "dev": "parcel src/css/hack.css"
   },
   "repository": {
     "type": "git",
@@ -17,30 +14,19 @@
   "files": [
     "dist"
   ],
-  "keywords": [
-    "hack",
-    "css",
-    "ui",
-    "web",
-    "bootstrap"
-  ],
-  "author": "EGOIST <0x142857@gmail.com>",
+  "author": "Yvan Sraka <yvan@sraka.xyz>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/egoist/hack/issues"
+    "url": "https://github.com/yvan-sraka/hack/issues"
   },
-  "homepage": "https://github.com/egoist/hack#readme",
-  "devDependencies": {
-    "color-preset": "^0.1.1",
-    "cssnano": "^3.7.3",
-    "gulp": "^3.9.1",
-    "gulp-jade": "^1.1.0",
-    "gulp-postcss": "^6.1.1",
-    "gulp-serve": "^1.4.0",
-    "jstransformer-marked": "^1.0.1",
-    "postcss-cssnext": "^2.7.0",
-    "postcss-import": "^8.1.2",
-    "postcss-mixins": "^5.0.0",
-    "postcss-simple-vars": "^3.0.0"
+  "homepage": "https://github.com/yvan-sraka/hack",
+  "dependencies": {
+    "cssnano": "^5.0.2",
+    "parcel": "^2.0.0-beta.2",
+    "postcss": "^8.2.13",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^14.0.1",
+    "postcss-mixins": "^7.0.3",
+    "postcss-simple-vars": "^6.0.3"
   }
 }

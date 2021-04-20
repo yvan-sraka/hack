@@ -1,25 +1,9 @@
-<p align="center">
-  <img src="./media/logo.png" width="60" /><br><br>
-  <a href="https://npmjs.com/package/hack"><img src="https://img.shields.io/npm/v/hack.svg?style=flat-square" alt="npm version"></a> <a href="https://npmjs.com/package/hack"><img src="https://img.shields.io/npm/dm/hack.svg?style=flat-square" alt="npm downloads"></a> <a href="https://gitter.im/egoist/hack"><img src="https://img.shields.io/gitter/room/egoist/hack.svg?style=flat-square" alt="Gitter"></a>
-</p>
-
-<details><summary>Table of Contents</summary>
-
-<!-- toc -->
-
-- [Install](#install)
-- [Related projects](#related-projects)
-- [Development](#development)
-- [License](#license)
-
-<!-- tocstop -->
-
-</details>
+# `hack.css`
 
 ## Install
 
 ```bash
-$ npm install --save hack
+$ yarn add hack
 ```
 
 Option #1: Use any pre-processor
@@ -57,30 +41,14 @@ It's also available on [CDNJS](https://cdnjs.com/libraries/hack), [jsDelivr](htt
 
 For more usages and style guideline head to [the website](http://hackcss.egoist.moe/) 🎉
 
-## Showcase
-
-[A list of projects that use `hack`](https://github.com/egoist/hack/wiki/Showcase).
-
-## Related projects
-
-- [Jekyll theme for Hack](https://github.com/wemake-services/jekyll-theme-hackcss)
-- [Hugo theme for Hack](https://after-dark.habd.as)
-- [Gutenberg theme for Hack](https://www.getgutenberg.io/themes/after-dark/)
-
-## Mirrors
-
-- https://git.habd.as/jhabdas/hack
-
 ## Development
 
 ```bash
-$ npm run dev
+$ yarn dev
 
-$ npm run build
+$ yarn build
 ```
 
 ## License
 
-MIT &copy; [EGOIST](https://github.com/egoist)
-
-Logo was generated with [slogan](https://github.com/egoist/slogan).
+MIT
