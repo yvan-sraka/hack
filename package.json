@@ -4,8 +4,7 @@
   "description": "Dead simple CSS framework.",
   "main": "dist/hack.css",
   "scripts": {
-    "build": "parcel build src/css/hack.css",
-    "dev": "parcel src/css/hack.css"
+    "start": "parcel src/index.html --open"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,12 @@
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^14.0.1",
     "postcss-mixins": "^7.0.3",
-    "postcss-simple-vars": "^6.0.3"
+    "postcss-simple-vars": "^6.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-react": "^7.13.13"
   }
 }
