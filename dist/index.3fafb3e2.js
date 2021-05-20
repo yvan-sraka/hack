@@ -740,9 +740,9 @@ if ("development" !== "production") {
   })();
 }
 
-},{}],"42Sae":[function(require,module,exports) {
+},{}],"3Imd1":[function(require,module,exports) {
 var HMR_HOST = null;
-var HMR_PORT = 41075;
+var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
 module.bundle.HMR_BUNDLE_ID = "0fa2489aa94c8731ee2aee9f3fafb3e2";
@@ -1055,13 +1055,13 @@ try {
   class HelloMessage extends _reactDefault.default.Component {
     render() {
       return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", null, "Hello ", this.props.name)
+        /*#__PURE__*/_reactDefault.default.createElement("h1", null, "Hello, ", this.props.name, "!")
       );
     }
   }
   var mountNode = document.getElementById("app");
   _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(HelloMessage, {
-    name: "Jane"
+    name: "World"
   }), mountNode);
   helpers.postlude(module);
 } finally {
@@ -26461,6 +26461,6 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"592mh"}]},["1j6wU","42Sae","5rkFb"], "5rkFb", "parcelRequirefd34")
+},{"react-refresh/runtime":"592mh"}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequirea2b9")
 
 //# sourceMappingURL=index.3fafb3e2.js.map

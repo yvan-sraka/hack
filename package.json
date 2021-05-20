@@ -1,24 +1,24 @@
 {
-  "name": "hack",
-  "version": "0.8.1",
+  "name": "rstrtt",
+  "version": "0.10.0",
   "description": "Dead simple CSS framework.",
-  "main": "dist/hack.css",
+  "main": "dist/rstrtt.css",
   "scripts": {
     "start": "parcel src/index.html --open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egoist/hack.git"
+    "url": "git+https://github.com/cppccn/rstrtt.git"
   },
   "files": [
     "dist"
   ],
   "author": "Yvan Sraka <yvan@sraka.xyz>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/yvan-sraka/hack/issues"
+    "url": "https://github.com/cppccn/rstrtt/issues"
   },
-  "homepage": "https://github.com/yvan-sraka/hack",
+  "homepage": "https://github.com/cppccn/rstrtt",
   "dependencies": {
     "cssnano": "^5.0.2",
     "parcel": "^2.0.0-beta.2",

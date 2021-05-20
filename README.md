@@ -1,46 +1,32 @@
-# `hack.css`
+# Ristretto
 
 ## Install
 
-```bash
-$ yarn add hack
+```shell
+% yarn add rstrtt
 ```
 
 Option #1: Use any pre-processor
 
 ```js
-import 'hack'
+import 'rstrtt'
 ```
 
 Option #2: hot-link the css files:
 
 ```html
-<link rel="stylesheet" href="/path/to/hack.css">
-
-<!-- markdown theme -->
-<body class="hack"></body>
-
-<!-- standard theme -->
-<link rel="stylesheet" href="/path/to/standard.css">
-<body class="standard"></body>
-
-<!-- dark theme -->
-<link rel="stylesheet" href="/path/to/dark.css">
-<body class="hack dark"></body>
-
-<!-- dark-grey theme -->
-<link rel="stylesheet" href="/path/to/dark-grey.css">
-<body class="hack dark-grey"></body>
-
-<!-- solarized-dark theme -->
-<link rel="stylesheet" href="/path/to/solarized-dark.css">
-<body class="hack solarized-dark"></body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/path/to/rstrtt.css">
+</head>
+<body class="rstrtt">
+    <h1>Hello, World! </h1>
+</body>
+</html>
 ```
 
-It's also available on [CDNJS](https://cdnjs.com/libraries/hack), [jsDelivr](http://cdn.jsdelivr.net/npm/hack/dist/) and [UNPKG](https://unpkg.com/hack/).
-
-For more usages and style guideline head to [the website](http://yvan-sraka.github.io/hack) 🎉
-
-## License
-
-MIT
+For more usages and style guideline head to [the website](https://cppccn.github.io/rstrtt/)!
