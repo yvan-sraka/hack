@@ -4,6 +4,6 @@
 @import './grid.css';
 @import './markdown.css';
 @import './layout.css';
-/* TODO @import './components.css'; */
+@import './components.css';
 @import './responsive.css';
 /* @import './pygments/emacs.css'; */
