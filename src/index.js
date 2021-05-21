@@ -1,11 +1,34 @@
-import React from "react";
-import ReactDOM from "react-dom";
+"use strict"
 
-class HelloMessage extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}!</h1>;
-  }
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import ProgressBar from "./ProgressBar"; 
+
+function ProgressBarSample() {
+    var [prcnt, setPrcnt] = useState(0);
+    setTimeout(function increment() {
+        if (prcnt < 100) {
+            setPrcnt(prcnt+=10);
+            setTimeout(increment, 1000);
+        }
+    }, 1000)
+    return (<ProgressBar percent={prcnt}/>)
+}
+
+function ProgressBarSample_WithPercents() {
+    var [prcnt, setPrcnt] = useState(0);
+    setTimeout(function increment() {
+        if (prcnt < 100) {
+            setPrcnt(prcnt+=10);
+            setTimeout(increment, 1000);
+        }
+    }, 1000)
+    return (<ProgressBar percent={prcnt} show="True"/>)
 }
 
 var mountNode = document.getElementById("app");
-ReactDOM.render(<HelloMessage name="World" />, mountNode);
+ReactDOM.render(
+    <div>
+        <ProgressBarSample/><br/>
+        <ProgressBarSample_WithPercents/><br/>
+    </div>, mountNode);
