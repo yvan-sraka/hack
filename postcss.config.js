@@ -3,9 +3,7 @@ module.exports = {
     require('postcss-import')(),
     require('postcss-mixins'),
     require('postcss-simple-vars'),
-    require('postcss-cssnext')({
-      browsers: ['last 2 versions', 'ie > 8']
-    }),
+    require('postcss-preset-env'),
     require('cssnano')({
       autoprefixer: false
     })
