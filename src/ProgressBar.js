@@ -9,9 +9,14 @@ function ProgressBar(props) {
         false: 'progress-bar',
         true: 'progress-bar-show-percent'
     }[props['showPercent']];
+    const classbarfilled = {
+        undefined: 'progress-bar-filled',
+        false: 'progress-bar-filled-error',
+        true: 'progress-bar-filled-success'
+    }[props['success']];
     let stl = {width: props.percent+"%"};
     let dtflld = `Loading ${props.percent}%`;
-    return (<div className={classname}><div className="progress-bar-filled" style={stl} data-filled={dtflld}/></div>)
+    return (<div className={classname}><div className={classbarfilled} style={stl} data-filled={dtflld}/></div>)
 }
 
 export default ProgressBar;

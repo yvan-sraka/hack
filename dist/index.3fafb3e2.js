@@ -1055,7 +1055,7 @@ try {
   var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
   var _ProgressBar = require("./ProgressBar");
   var _ProgressBarDefault = _parcelHelpers.interopDefault(_ProgressBar);
-  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  var _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$();
   function ProgressBarSample() {
     _s();
     var [prcnt, setPrcnt] = _react.useState(0);
@@ -1091,11 +1091,53 @@ try {
   }
   _s2(ProgressBarSample_WithPercents, "+wPAyxZYYzxYBlc5QuqtSd1L9s0=");
   _c2 = ProgressBarSample_WithPercents;
+  function ProgressBarSample_success() {
+    _s3();
+    var [prcnt, setPrcnt] = _react.useState(0);
+    setTimeout(function increment() {
+      if (prcnt < 100) {
+        setPrcnt(prcnt += 10);
+        setTimeout(increment, 1000);
+      }
+    }, 1000);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_ProgressBarDefault.default, {
+        percent: prcnt,
+        show: "True",
+        success: prcnt == 100 || undefined
+      })
+    );
+  }
+  _s3(ProgressBarSample_success, "+wPAyxZYYzxYBlc5QuqtSd1L9s0=");
+  _c3 = ProgressBarSample_success;
+  function ProgressBarSample_error() {
+    _s4();
+    var [prcnt, setPrcnt] = _react.useState(0);
+    setTimeout(function increment() {
+      if (prcnt < 100) {
+        setPrcnt(prcnt += 10);
+        setTimeout(increment, 1000);
+      }
+    }, 1000);
+    let sccss = undefined;
+    if (prcnt == 100) sccss = false;
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_ProgressBarDefault.default, {
+        percent: prcnt,
+        show: "True",
+        success: sccss
+      })
+    );
+  }
+  _s4(ProgressBarSample_error, "+wPAyxZYYzxYBlc5QuqtSd1L9s0=");
+  _c4 = ProgressBarSample_error;
   var mountNode = document.getElementById("app");
-  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_WithPercents, null), /*#__PURE__*/_reactDefault.default.createElement("br", null)), mountNode);
-  var _c, _c2;
+  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_WithPercents, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_success, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_error, null), /*#__PURE__*/_reactDefault.default.createElement("br", null)), mountNode);
+  var _c, _c2, _c3, _c4;
   $RefreshReg$(_c, "ProgressBarSample");
   $RefreshReg$(_c2, "ProgressBarSample_WithPercents");
+  $RefreshReg$(_c3, "ProgressBarSample_success");
+  $RefreshReg$(_c4, "ProgressBarSample_error");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
@@ -26313,6 +26355,11 @@ try {
       false: 'progress-bar',
       true: 'progress-bar-show-percent'
     })[props['showPercent']];
+    const classbarfilled = ({
+      undefined: 'progress-bar-filled',
+      false: 'progress-bar-filled-error',
+      true: 'progress-bar-filled-success'
+    })[props['success']];
     let stl = {
       width: props.percent + "%"
     };
@@ -26321,7 +26368,7 @@ try {
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         className: classname
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "progress-bar-filled",
+        className: classbarfilled,
         style: stl,
         "data-filled": dtflld
       }))

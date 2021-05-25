@@ -1,46 +1,25 @@
 @import "color-preset/material.css";
 
+@import "./components/progressbar.css";
+
 /**
  * Progress Bar
  */
 
 .progress-bar {
-  height: 8px;
-  opacity: .8;
-  background-color: #ccc;
-  margin-top: 12px;
-  &.progress-bar-show-percent {
-    margin-top: 38px;
-  }
+  @mixin mixin-progress-bar;
 }
 
 .progress-bar-filled {
-  background-color: #808080;
-  height: 100%;
-  transition: width .3s ease;
-  position: relative;
-  width: 0%;
+  @mixin mixin-progress-bar-filled #808080;
+}
 
-  &:before {
-    content: '';
-    border: 6px solid transparent;
-    border-top-color: #808080;
-    position: absolute;
-    top: -12px;
-    right: -6px;
-  }
-  &:after {
-    color: #808080;
-    content: attr(data-filled);
-    display: block;
-    font-size: 12px;
-    white-space: nowrap;
-    position: absolute;
-    border: 6px solid transparent;
-    top: -38px;
-    right: 0;
-    transform: translateX(50%);
-  }
+.progress-bar-filled-success {
+  @mixin mixin-progress-bar-filled $green-600;
+}
+
+.progress-bar-filled-error {
+  @mixin mixin-progress-bar-filled $red-600;
 }
 
 /**
