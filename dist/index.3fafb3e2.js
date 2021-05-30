@@ -1132,7 +1132,10 @@ try {
   _c4 = ProgressBarSample_error;
   var mountNode = document.getElementById("app");
   _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_WithPercents, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_success, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_error, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(_components.List, {
-    data: ['one', 'two', 'three', ['ga', 'bu', 'zo']]
+    data: [{
+      value: 'shadock language',
+      next: ['ga', 'bu', 'zo', 'meu']
+    }, 'one', 'two', 'three']
   })), mountNode);
   var _c, _c2, _c3, _c4;
   $RefreshReg$(_c, "ProgressBarSample");
@@ -26616,25 +26619,30 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('../css/rstrtt.css');
   function List(props) {
-    const data = props["data"];
+    let {data, options} = props;
     if (data === undefined || data == null) return null;
+    let [value, next] = ['value', 'next'];
+    if (options !== undefined) {
+      value = options['value'];
+      next = options['next'];
+    }
     let key = 0;
-    function listing(v) {
-      if (!Array.isArray(v)) return null;
+    function l(v) {
+      if (v == null || !Array.isArray(v)) return null;
       return (
         /*#__PURE__*/_reactDefault.default.createElement("ul", {
           key: key++
         }, " ", v.map(a => {
-          return (
-            /*#__PURE__*/_reactDefault.default.createElement("li", {
-              key: key++
-            }, Array.isArray(a) ? listing(a) : a)
-          );
+          return typeof a === 'string' ? /*#__PURE__*/_reactDefault.default.createElement("li", {
+            key: key++
+          }, a) : /*#__PURE__*/_reactDefault.default.createElement("li", {
+            key: key++
+          }, a[value], l(a[next]));
         }))
       );
     }
     ;
-    return listing(data);
+    return l(data);
   }
   _c = List;
   exports.default = List;
