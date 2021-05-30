@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import ProgressBar from "./ProgressBar"; 
+import { ProgressBar, List } from "./components"; 
 
 function ProgressBarSample() {
     var [prcnt, setPrcnt] = useState(0);
@@ -57,4 +57,5 @@ ReactDOM.render(
         <ProgressBarSample_WithPercents/><br/>
         <ProgressBarSample_success/><br/>
         <ProgressBarSample_error/><br/>
+        <List data={['one', 'two', 'three', ['ga', 'bu', 'zo']]}/>
     </div>, mountNode);

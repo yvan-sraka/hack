@@ -1,7 +1,7 @@
 "use strict"
 
 import React from 'react';
-import './css/rstrtt.css';
+import '../css/rstrtt.css';
 
 function ProgressBar(props) {
     const classname = {
