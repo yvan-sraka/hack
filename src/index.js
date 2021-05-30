@@ -57,5 +57,5 @@ ReactDOM.render(
         <ProgressBarSample_WithPercents/><br/>
         <ProgressBarSample_success/><br/>
         <ProgressBarSample_error/><br/>
-        <List data={['one', 'two', 'three', ['ga', 'bu', 'zo']]}/>
+        <List data={[{value:'shadock language', next:['ga', 'bu', 'zo', 'meu']}, 'one', 'two', 'three']}/>
     </div>, mountNode);
