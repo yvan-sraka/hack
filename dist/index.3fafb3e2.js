@@ -1053,8 +1053,7 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _reactDom = require("react-dom");
   var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
-  var _ProgressBar = require("./ProgressBar");
-  var _ProgressBarDefault = _parcelHelpers.interopDefault(_ProgressBar);
+  var _components = require("./components");
   var _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$();
   function ProgressBarSample() {
     _s();
@@ -1066,7 +1065,7 @@ try {
       }
     }, 1000);
     return (
-      /*#__PURE__*/_reactDefault.default.createElement(_ProgressBarDefault.default, {
+      /*#__PURE__*/_reactDefault.default.createElement(_components.ProgressBar, {
         percent: prcnt
       })
     );
@@ -1083,7 +1082,7 @@ try {
       }
     }, 1000);
     return (
-      /*#__PURE__*/_reactDefault.default.createElement(_ProgressBarDefault.default, {
+      /*#__PURE__*/_reactDefault.default.createElement(_components.ProgressBar, {
         percent: prcnt,
         show: "True"
       })
@@ -1101,7 +1100,7 @@ try {
       }
     }, 1000);
     return (
-      /*#__PURE__*/_reactDefault.default.createElement(_ProgressBarDefault.default, {
+      /*#__PURE__*/_reactDefault.default.createElement(_components.ProgressBar, {
         percent: prcnt,
         show: "True",
         success: prcnt == 100 || undefined
@@ -1122,7 +1121,7 @@ try {
     let sccss = undefined;
     if (prcnt == 100) sccss = false;
     return (
-      /*#__PURE__*/_reactDefault.default.createElement(_ProgressBarDefault.default, {
+      /*#__PURE__*/_reactDefault.default.createElement(_components.ProgressBar, {
         percent: prcnt,
         show: "True",
         success: sccss
@@ -1132,7 +1131,9 @@ try {
   _s4(ProgressBarSample_error, "+wPAyxZYYzxYBlc5QuqtSd1L9s0=");
   _c4 = ProgressBarSample_error;
   var mountNode = document.getElementById("app");
-  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_WithPercents, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_success, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_error, null), /*#__PURE__*/_reactDefault.default.createElement("br", null)), mountNode);
+  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_WithPercents, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_success, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(ProgressBarSample_error, null), /*#__PURE__*/_reactDefault.default.createElement("br", null), /*#__PURE__*/_reactDefault.default.createElement(_components.List, {
+    data: ['one', 'two', 'three', ['ga', 'bu', 'zo']]
+  })), mountNode);
   var _c, _c2, _c3, _c4;
   $RefreshReg$(_c, "ProgressBarSample");
   $RefreshReg$(_c2, "ProgressBarSample_WithPercents");
@@ -1144,7 +1145,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-dom":"2sg1U","./ProgressBar":"2Gauo","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3b2NM":[function(require,module,exports) {
+},{"react":"3b2NM","react-dom":"2sg1U","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components":"5Sn8i"}],"3b2NM":[function(require,module,exports) {
 "use strict";
 if ("development" === 'production') {
   module.exports = require('./cjs/react.production.min.js');
@@ -26337,54 +26338,7 @@ if ("development" !== "production") {
   })();
 }
 
-},{}],"2Gauo":[function(require,module,exports) {
-"use strict";
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('./css/rstrtt.css');
-  function ProgressBar(props) {
-    const classname = ({
-      undefined: 'progress-bar',
-      false: 'progress-bar',
-      true: 'progress-bar-show-percent'
-    })[props['showPercent']];
-    const classbarfilled = ({
-      undefined: 'progress-bar-filled',
-      false: 'progress-bar-filled-error',
-      true: 'progress-bar-filled-success'
-    })[props['success']];
-    let stl = {
-      width: props.percent + "%"
-    };
-    let dtflld = `Loading ${props.percent}%`;
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: classname
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: classbarfilled,
-        style: stl,
-        "data-filled": dtflld
-      }))
-    );
-  }
-  _c = ProgressBar;
-  exports.default = ProgressBar;
-  var _c;
-  $RefreshReg$(_c, "ProgressBar");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","./css/rstrtt.css":"3qhpv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3qhpv":[function() {},{}],"5gA8y":[function(require,module,exports) {
+},{}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -26583,6 +26537,143 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"592mh"}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequirea2b9")
+},{"react-refresh/runtime":"592mh"}],"5Sn8i":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "ProgressBar", function () {
+  return _ProgressBarDefault.default;
+});
+_parcelHelpers.export(exports, "List", function () {
+  return _ListDefault.default;
+});
+_parcelHelpers.export(exports, "BlockQuote", function () {
+  return _BlockQuoteDefault.default;
+});
+var _ProgressBar = require('./ProgressBar');
+var _ProgressBarDefault = _parcelHelpers.interopDefault(_ProgressBar);
+var _List = require('./List');
+var _ListDefault = _parcelHelpers.interopDefault(_List);
+var _BlockQuote = require('./BlockQuote');
+var _BlockQuoteDefault = _parcelHelpers.interopDefault(_BlockQuote);
+
+},{"./ProgressBar":"24BPj","./List":"3wNuo","./BlockQuote":"PyPK5","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"24BPj":[function(require,module,exports) {
+"use strict";
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../css/rstrtt.css');
+  function ProgressBar(props) {
+    const classname = ({
+      undefined: 'progress-bar',
+      false: 'progress-bar',
+      true: 'progress-bar-show-percent'
+    })[props['showPercent']];
+    const classbarfilled = ({
+      undefined: 'progress-bar-filled',
+      false: 'progress-bar-filled-error',
+      true: 'progress-bar-filled-success'
+    })[props['success']];
+    let stl = {
+      width: props.percent + "%"
+    };
+    let dtflld = `Loading ${props.percent}%`;
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: classname
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: classbarfilled,
+        style: stl,
+        "data-filled": dtflld
+      }))
+    );
+  }
+  _c = ProgressBar;
+  exports.default = ProgressBar;
+  var _c;
+  $RefreshReg$(_c, "ProgressBar");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../css/rstrtt.css":"3qhpv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3qhpv":[function() {},{}],"3wNuo":[function(require,module,exports) {
+"use strict";
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../css/rstrtt.css');
+  function List(props) {
+    const data = props["data"];
+    if (data === undefined || data == null) return null;
+    let key = 0;
+    function listing(v) {
+      if (!Array.isArray(v)) return null;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("ul", {
+          key: key++
+        }, " ", v.map(a => {
+          return (
+            /*#__PURE__*/_reactDefault.default.createElement("li", {
+              key: key++
+            }, Array.isArray(a) ? listing(a) : a)
+          );
+        }))
+      );
+    }
+    ;
+    return listing(data);
+  }
+  _c = List;
+  exports.default = List;
+  var _c;
+  $RefreshReg$(_c, "List");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../css/rstrtt.css":"3qhpv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3qhpv":[function() {},{}],"PyPK5":[function(require,module,exports) {
+"use strict";
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('../css/rstrtt.css');
+  function BlockQuote(props) {
+    if (!props["data"]) return null;
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("blockquote", null, props["data"])
+    );
+  }
+  _c = BlockQuote;
+  exports.default = BlockQuote;
+  var _c;
+  $RefreshReg$(_c, "BlockQuote");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../css/rstrtt.css":"3qhpv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3qhpv":[function() {},{}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequirea2b9")
 
 //# sourceMappingURL=index.3fafb3e2.js.map

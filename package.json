@@ -4,7 +4,8 @@
   "description": "Dead simple CSS framework.",
   "main": "dist/rstrtt.css",
   "scripts": {
-    "start": "parcel src/index.html --open"
+    "start": "parcel src/index.html --open",
+    "test": "react-scripts test"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,10 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.0",
-    "@babel/preset-react": "^7.13.13"
+    "@babel/preset-react": "^7.13.13",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.1.10",
+    "react-scripts": "^4.0.3"
   }
 }
