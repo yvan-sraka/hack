@@ -69,3 +69,15 @@ a:hover {
 a:hover:visited {
   background-color: purple;
 }
+
+b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+}
