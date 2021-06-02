@@ -35,7 +35,7 @@ const ProgressBarSampleSuccess = () => {
       setTimeout(increment, 1000)
     }
   }, 1000)
-  return (<ProgressBar percent={percent} show='True' success={percent == 100 || undefined} />)
+  return (<ProgressBar percent={percent} show='True' success={percent === 100 || undefined} />)
 }
 
 const ProgressBarSampleError = () => {
@@ -47,7 +47,7 @@ const ProgressBarSampleError = () => {
     }
   }, 1000)
   let success = true
-  if (percent == 100) success = false
+  if (percent === 100) success = false
   return (<ProgressBar percent={percent} show='True' success={success} />)
 }
 
