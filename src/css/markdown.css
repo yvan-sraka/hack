@@ -17,7 +17,10 @@
 .rstrtt code {
   font-size: 1rem;
   font-style: normal;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin: 0;
+  font-family: "Fira Code", "Jetbrains Mono";
+  font-feature-settings: "calt" 1; /* Enable ligatures for IE 10+, Edge */
+  text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
 }
 
 .rstrtt code,
