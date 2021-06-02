@@ -1,4 +1,4 @@
-# Ristretto
+# ☕ Ristretto
 
 ## Install
 
