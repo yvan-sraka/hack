@@ -1,61 +1,62 @@
 'use strict'
 
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import * as React from 'react'
+import { useState } from 'react'
+import * as ReactDOM from 'react-dom'
 import { ProgressBar, List } from './components'
 
-function ProgressBarSample () {
-  let [prcnt, setPrcnt] = useState(0)
+const ProgressBarSample = () => {
+  let [percent, setPercent] = useState(0)
   setTimeout(function increment () {
-    if (prcnt < 100) {
-      setPrcnt(prcnt += 10)
+    if (percent < 100) {
+      setPercent(percent += 10)
       setTimeout(increment, 1000)
     }
   }, 1000)
-  return (<ProgressBar percent={prcnt} />)
+  return (<ProgressBar percent={percent} />)
 }
 
-function ProgressBarSample_WithPercents () {
-  let [prcnt, setPrcnt] = useState(0)
+const ProgressBarSampleWithPercents = () => {
+  let [percent, setPercent] = useState(0)
   setTimeout(function increment () {
-    if (prcnt < 100) {
-      setPrcnt(prcnt += 10)
+    if (percent < 100) {
+      setPercent(percent += 10)
       setTimeout(increment, 1000)
     }
   }, 1000)
-  return (<ProgressBar percent={prcnt} show='True' />)
+  return (<ProgressBar percent={percent} show='True' />)
 }
 
-function ProgressBarSample_success () {
-  let [prcnt, setPrcnt] = useState(0)
+const ProgressBarSampleSuccess = () => {
+  let [percent, setPercent] = useState(0)
   setTimeout(function increment () {
-    if (prcnt < 100) {
-      setPrcnt(prcnt += 10)
+    if (percent < 100) {
+      setPercent(percent += 10)
       setTimeout(increment, 1000)
     }
   }, 1000)
-  return (<ProgressBar percent={prcnt} show='True' success={prcnt == 100 || undefined} />)
+  return (<ProgressBar percent={percent} show='True' success={percent == 100 || undefined} />)
 }
 
-function ProgressBarSample_error () {
-  let [prcnt, setPrcnt] = useState(0)
+const ProgressBarSampleError = () => {
+  let [percent, setPercent] = useState(0)
   setTimeout(function increment () {
-    if (prcnt < 100) {
-      setPrcnt(prcnt += 10)
+    if (percent < 100) {
+      setPercent(percent += 10)
       setTimeout(increment, 1000)
     }
   }, 1000)
-  let sccss
-  if (prcnt == 100) sccss = false
-  return (<ProgressBar percent={prcnt} show='True' success={sccss} />)
+  let success = true
+  if (percent == 100) success = false
+  return (<ProgressBar percent={percent} show='True' success={success} />)
 }
 
 const mountNode = document.getElementById('app')
 ReactDOM.render(
   <div>
     <ProgressBarSample /><br />
-    <ProgressBarSample_WithPercents /><br />
-    <ProgressBarSample_success /><br />
-    <ProgressBarSample_error /><br />
+    <ProgressBarSampleWithPercents /><br />
+    <ProgressBarSampleSuccess /><br />
+    <ProgressBarSampleError /><br />
     <List data={[{ value: 'shadock language', next: ['ga', 'bu', 'zo', 'meu'] }, 'one', 'two', 'three']} />
   </div>, mountNode)

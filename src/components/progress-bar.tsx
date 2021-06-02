@@ -1,9 +1,9 @@
 'use strict'
 
-import React from 'react'
+import * as React from 'react'
 import '../css/rstrtt.css'
 
-function ProgressBar (props) {
+const ProgressBar = props => {
   const classname = {
     undefined: 'progress-bar',
     false: 'progress-bar',
@@ -14,9 +14,9 @@ function ProgressBar (props) {
     false: 'progress-bar-filled-error',
     true: 'progress-bar-filled-success'
   }[props.success]
-  const stl = { width: props.percent + '%' }
-  const dtflld = `Loading ${props.percent}%`
-  return (<div className={classname}><div className={classbarfilled} style={stl} data-filled={dtflld} /></div>)
+  const style = { width: props.percent + '%' }
+  const  dataFilled = `Loading ${props.percent}%`
+  return (<div className={classname}><div className={classbarfilled} style={style} data-filled={dataFilled} /></div>)
 }
 
 export default ProgressBar

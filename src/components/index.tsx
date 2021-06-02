@@ -1,5 +1,5 @@
-import ProgressBar from './ProgressBar'
-import List from './List'
-import BlockQuote from './BlockQuote'
+import ProgressBar from './progress-bar'
+import List from './list'
+import BlockQuote from './block-quote'
 
 export { ProgressBar, List, BlockQuote }
