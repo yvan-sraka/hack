@@ -15,7 +15,7 @@ const ProgressBar = props => {
     true: 'progress-bar-filled-success'
   }[props.success]
   const style = { width: props.percent + '%' }
-  const  dataFilled = `Loading ${props.percent}%`
+  const dataFilled = `Loading ${props.percent}%`
   return (<div className={classname}><div className={classbarfilled} style={style} data-filled={dataFilled} /></div>)
 }
 

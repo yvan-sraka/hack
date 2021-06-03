@@ -22,7 +22,7 @@ const List = props => {
       })}
       </ul>
     )
-  };
+  }
   return list(data)
 }
 
