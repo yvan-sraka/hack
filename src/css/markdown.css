@@ -135,7 +135,13 @@
 */
 .rstrtt em:before,
 .rstrtt em:after {
-  content: "*";
+  content: "_";
+  display: inline;
+  color: $light-grey;
+}
+.rstrtt strong:before,
+.rstrtt strong:after {
+  content: "**";
   display: inline;
   color: $light-grey;
 }
