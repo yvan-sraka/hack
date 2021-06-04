@@ -5,6 +5,8 @@
   "main": "dist/rstrtt.css",
   "scripts": {
     "lint": "eslint \"**/*.tsx\"",
+    "build": "parcel build src/css/rstrtt.css",
+    "clean":  "rm -rf .parcel-cache",
     "start": "parcel src/index.html --open",
     "test": "react-scripts test"
   },
