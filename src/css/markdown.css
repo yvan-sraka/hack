@@ -133,6 +133,9 @@
   content: "`";
   display: inline;
 }
+.rstrtt hr {
+  border: 0.1rem solid black;
+}
 @-moz-document url-prefix() {
   .rstrtt h1 {
     display: block;
