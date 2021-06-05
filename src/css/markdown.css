@@ -96,6 +96,7 @@
 .rstrtt h5:before,
 .rstrtt h6:before {
   display: inline;
+  color: $light-grey;
 }
 .rstrtt h1:before {
   content: "# ";
@@ -158,6 +159,7 @@
 .rstrtt em:after {
   content: "*";
   display: inline;
+  color: $light-grey;
 }
 .rstrtt pre code:before,
 .rstrtt pre code:after {
@@ -170,6 +172,7 @@
 .rstrtt code:after {
   content: "`";
   display: inline;
+  color: $light-grey;
 }
 /*
 .rstrtt hr {
