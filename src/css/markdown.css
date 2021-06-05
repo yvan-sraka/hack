@@ -15,14 +15,37 @@
 .rstrtt em,
 .rstrtt strong,
 .rstrtt code {
-  font-size: 1rem;
-  font-style: normal;
   margin: 0;
   font-family: "Fira Code", "Jetbrains Mono";
   font-feature-settings: "calt" 1; /* Enable ligatures for IE 10+, Edge */
   text-rendering: optimizeLegibility; /* Force ligatures for Webkit, Blink, Gecko */
 }
-
+.rstrtt h1 { font-size: 3rem; }
+.rstrtt h2 { font-size: 2rem; }
+.rstrtt h3 { font-size: 1.8rem; }
+.rstrtt h4 { font-size: 1.6rem; }
+.rstrtt h5 { font-size: 1.4rem; }
+.rstrtt h6 { font-size: 1.2rem; }
+.rstrtt,
+.rstrtt code,
+.rstrtt blockquote,
+.rstrtt em,
+.rstrtt strong,
+.rstrtt code {
+  font-size: 1rem;
+}
+.rstrtt,
+.rstrtt h1,
+.rstrtt h2,
+.rstrtt h3,
+.rstrtt h4,
+.rstrtt h5,
+.rstrtt h6,
+.rstrtt code,
+.rstrtt blockquote,
+.rstrtt code {
+  font-style: normal;
+}
 .rstrtt code,
 .rstrtt blockquote,
 .rstrtt em,
@@ -30,7 +53,6 @@
 .rstrtt code {
   line-height: 20px;
 }
-
 .rstrtt h1,
 .rstrtt h2,
 .rstrtt h3,
