@@ -1,6 +1,6 @@
 {
   "name": "rstrtt",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Dead simple CSS framework.",
   "main": "dist/rstrtt.css",
   "scripts": {
