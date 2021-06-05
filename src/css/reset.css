@@ -52,13 +52,12 @@ strong {
 a {
   cursor: pointer;
   color: blue;
-  text-decoration: none;
-  border-bottom: 1px solid blue;
+  text-decoration: underline solid 0.1em;
 }
 
 a:visited {
   color: purple;
-  border-bottom: 1px solid purple;
+  text-decoration: underline solid 0.1em;
 }
 
 a:hover {
