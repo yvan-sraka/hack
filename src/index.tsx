@@ -53,10 +53,5 @@ const ProgressBarSampleError = () => {
 
 const mountNode = document.getElementById('app')
 ReactDOM.render(
-  <div>
-    <ProgressBarSample /><br />
-    <ProgressBarSampleWithPercents /><br />
-    <ProgressBarSampleSuccess /><br />
-    <ProgressBarSampleError /><br />
-    <List data={[{ value: 'shadock language', next: ['ga', 'bu', 'zo', 'meu'] }, 'one', 'two', 'three']} />
-  </div>, mountNode)
+  <div className="main container"></div>
+  , mountNode)
