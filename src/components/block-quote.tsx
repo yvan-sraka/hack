@@ -3,9 +3,8 @@
 import * as React from 'react'
 import '../css/rstrtt.css'
 
-const BlockQuote = props => {
-  if (!props.data) return null
-  return (<blockquote>{props.data}</blockquote>)
+const BlockQuote = (props: { data: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined }) => {
+  return !props.data ? null : <blockquote>{props.data}</blockquote>
 }
 
 export default BlockQuote

@@ -1,9 +1,9 @@
 'use strict'
 
-import * as React from 'react'
+import React from 'react'
 import '../css/rstrtt.css'
 
-const ProgressBar = props => {
+const ProgressBar = (props: { showPercent: string | number; success: string | number; percent: string }) => {
   const classname = {
     undefined: 'progress-bar',
     false: 'progress-bar',
