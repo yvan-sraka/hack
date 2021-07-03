@@ -3,7 +3,7 @@
 import * as React from 'react'
 import './css/rstrtt.css'
 import * as ReactDOM from 'react-dom'
-import * as sections from './sections/index.js'
+import * as sections from './sections/index'
 
 const mountNode = document.getElementById('app')
 ReactDOM.render(
@@ -17,5 +17,6 @@ ReactDOM.render(
     <sections.About />
     <sections.UseCase />
     <sections.Basic />
+    <sections.ListDocumentation />
   </div>
   , mountNode)

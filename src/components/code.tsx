@@ -7,9 +7,11 @@ function Code (props: {lang: string, data: string}) {
 }
 
 function HTML (props: {data: string}) {
-  return <code className="lang-html">
-    {props.data}
-  </code>
+  return <pre className="lang-html">
+    <code className="lang-html">
+      {props.data}
+    </code>
+  </pre>
 }
 
 export {
