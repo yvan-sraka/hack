@@ -18,5 +18,16 @@ ReactDOM.render(
     <sections.UseCase />
     <sections.Basic />
     <sections.ListDocumentation />
+    <sections.Form />
+    <sections.Help />
+    <sections.Table />
+    <sections.ProgressBarSection />
+    <sections.ButtonSection />
+    <sections.ButtonGroupSection />
+    <sections.CardSection />
+    <sections.Alert />
+    <sections.Media />
+    <sections.Loading />
+    <footer className="footer">Version 0.8.0 Build 1490883343</footer>
   </div>
   , mountNode)
